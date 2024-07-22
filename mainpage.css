@@ -1,0 +1,244 @@
+@font-face {
+    font-family: insideoutFont;
+    src: url(insideoutFont.ttf);
+}
+@font-face {
+    font-family: creditsFont;
+    src: url(clarendon.otf);
+}
+:root {
+    --joy: #D7DA3F;
+    --sadness: #0369C2;
+    --anger: #F2393D;
+    --disgust: #4DBE46;
+    --fear: #8680C6;
+    --envy: #5ed2cf;
+    --anxiety: #f68934;
+    --embarrassment: #e77194;
+    --ennui: #9fa4d1;
+}
+body {
+    height: 1400px;
+    background-color: black;
+}
+#header {
+    position: fixed;
+    width: 100%;
+    height: 15%;
+    top:0;
+    background-color: #000;
+    z-index: 2;
+}
+#header-corner {
+    position: absolute;
+    transform: rotate(-30deg);
+    left: 30px;
+}
+#header-msg {
+    font-family: insideoutFont;
+    color: white;
+    margin: 0;
+    font-size: 32px;
+    position: relative;
+}
+#header-txt {
+    font-family: insideoutFont;
+    color: white;
+    margin: 0;
+    font-size: 52px;
+    position: absolute;
+    left: 36%;
+    top: 30%;
+}
+br {
+    display: block; /* makes it have a width */
+    content: ""; /* clears default height */
+    margin-top: 0; /* change this to whatever height you want it */
+}
+#disney-pixar {
+    width: 60px;
+    position: relative;
+    top: 7px;
+}
+
+#instructionBlock {
+    position: relative;
+    top: 130px;
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+    line-height: 12px;
+}
+
+.instructions {
+    font-family: creditsFont;
+    font-size: 28px;
+    color: white;
+}
+
+#memories {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.memory {
+    position: absolute;
+    display: inline-block;
+    background-color: white;
+    transition: 0.7s;
+    border-radius: 50%;
+}
+
+.memory:hover {
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 25px white;
+}
+
+a {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    /*animation: swirl 20s infinite linear;*/
+    text-decoration: none;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+@keyframes swirl-clockwise {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes swirl-counterclockwise {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-360deg);
+    }
+}
+
+#high-school {
+    background: radial-gradient(circle at 170%, var(--joy) 70%, var(--sadness) 100%);
+    left: 30%;
+    top: 14%;
+}
+
+#korea {
+    background: radial-gradient(circle at 170%, var(--joy) 70%, var(--ennui) 100%);
+    left: 70%;
+    top: 28%;
+}
+
+#stl {
+    background: radial-gradient(circle at 170%, var(--joy) 70%, var(--envy) 100%);
+    left: 20%;
+    top: 42%;
+}
+
+#la {
+    background: radial-gradient(circle at 170%, var(--joy) 70%, var(--anxiety) 100%);
+    left: 50%;
+    top: 56%;
+}
+
+#chicago {
+    background: radial-gradient(circle at 170%, var(--joy) 70%, var(--disgust) 100%);
+    left: 75%;
+    top: 70%;
+}
+
+#boston {
+    background: radial-gradient(circle at 170%, var(--joy) 70%, var(--embarrassment) 100%);
+    left: 35%;
+    top: 84%;
+}
+
+
+.player {
+    position: fixed;
+    top: 82%;
+    left: 77.5%;
+    background-color: rgb(40, 40, 40, 0.8);
+    border-radius: 10px;
+    padding: 10px;
+    width: 300px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.0);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.song-info {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.album-cover {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    left: 5%;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.song-title {
+    position: absolute;
+    font-size: 16px;
+    top: 17%;
+    left: 27%;
+    font-weight: 300;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.song-artist {
+    position: absolute;
+    font-size: 12px;
+    top: 37%;
+    left: 27%;
+    font-weight: 200;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    color: rgb(180, 180, 180);
+}
+
+.progress-bar {
+    width: 80%;
+    height: 3px;
+    background-color: #404040;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.progress {
+    height: 100%;
+    background-color: #737373;
+    /*#1DB954;*/
+    width: 0%;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+}
+
+.controls i {
+    z-index: 2;
+    font-size: 16px;
+    cursor: pointer;
+    color: rgb(255, 255, 255, 0.7);
+}
+

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>High School</title>
+  <link rel="stylesheet" href="hs.css">
+</head>
+<body>
+  <script src='https://kit.fontawesome.com/1ee8f271b9.js'></script>
+  <script src="music-bar.js"></script>
+  <div id="header">
+    <h1 id="header-txt">High School</h1>
+    <div id="header-corner">
+      <img id="disney-pixar" src="disneypixar.png">
+      <h2 id="header-msg-1">Happy</h2>
+      <h2 id="header-msg-2"> Birthday</h2>
+    </div>
+  </div>
+  <div id="main-text">
+<!--    AAAAA-->
+    <div class="container a">
+      <div class="text a">
+        <h2><span style="color: #D7DA3F;">joy</span>: aww guys, don’t you remember when paul was in high school </h2>
+        <h2>and dating seojin? weren’t those the good times?</h2>
+        <br class="new-emotion">
+        <h2><span style="color: #0369C2;">sadness</span>: yeah… those times are goooone now.</h2>
+        <br class="new-emotion">
+        <h2><span style="color: #D7DA3F;">joy</span>: no, no, but those are good memories now!</h2>
+        <br class="new-emotion">
+        <h2><span style="color: #0369C2;">sadness</span>: yeah… and then they broke up.</h2>
+        <br class="new-emotion">
+        <h2><span style="color: #D7DA3F;">joy</span>: okayyy, but they’re back together now! and that’s how we</h2>
+        <h2>know we love her. they’re not going to break up again.</h2>
+        <br class="new-emotion">
+        <h2><span style="color: #f68934;">anxiety</span>: whatiftheybreakupagainthoughthenitssoover—</h2>
+        <br class="new-emotion">
+        <h2><span style="color: #D7DA3F;">joy</span>: hey, calm down, calm down. look. there’s a reason we’re</h2>
+        <h2>on this website after all.</h2>
+        <br class="new-emotion">
+      </div>
+      <div class="circle yellowa"></div>
+      <div class="circle reda"></div>
+      <div class="circle purplea"></div>
+      <div class="pic a">
+          <img src="hs1.jpg" class="hs a">
+      </div>
+    </div>
+<!--    BBBBB-->
+    <div class="container b">
+      <div class="text b">
+        <h2>it’s crazy to think that we’ve known each other for 8 years now.</h2>
+        <h2>i know we say it all the time, but i’m still so grateful that i'm</h2>
+        <h2>able to date someone who knows every inside joke that i do and </h2>
+        <h2>shares every memory that i have. it’s interesting to meet new people,</h2>
+        <h2>but honestly i much prefer someone that’s seen me grow and has</h2>
+        <h2>loved me through each stage of my life.</h2>
+      </div>
+      <div class="pic b">
+        <img class="hs b" src="hs2.jpg">
+      </div>
+      <div class="circle blueb"></div>
+      <div class="circle greenb"></div>
+      <div class="circle purpleb"></div>
+    </div>
+<!--    CCCCC-->
+    <div class="container c">
+      <div class="text c">
+        <h2><span style="color: #D7DA3F;">joy</span>: look! all those times they went to six flags together.</h2>
+        <br class="new-emotion">
+        <h2><span style="color: #f68934;">anxiety</span>/<span style="color: #8680C6;">fear</span>: (shakes head) we didn’t like that. </h2>
+        <br class="new-emotion">
+        <h2><span style="color: #D7DA3F;">joy</span>: but now we’re not afraid of heights at all!</h2>
+        <h2>(looks at <span style="color: #8680C6;">fear</span>)</h2>
+        <h2>okay, well, maybe just a little bit. and remember how he held</h2>
+        <h2>onto her hand every ride? that was so cute.</h2>
+        <br class="new-emotion">
+        <h2><span style="color: #e77194;">embarrassment</span>: there was too much pda that day.</h2>
+        <br class="new-emotion">
+        <h2><span style="color: #D7DA3F;">joy</span>: but hey, we're so good at pda now!</h2>
+        <br class="new-emotion">
+      </div>
+      <div class="pic c">
+        <img class="hs c" src="hs3.jpg">
+      </div>
+      <div class="circle yellowc"></div>
+      <div class="circle redc"></div>
+    </div>
+  <!--    DDDDD-->
+    <div class="container d">
+      <div class="text d">
+        <h2><span style="color: #D7DA3F;">joy</span>: and aww those times at panera?</h2>
+        <br class="new-emotion">
+        <h2><span style="color: #4DBE46;">disgust</span>: (is somebody gonna match ma freak? is somebody gonna </h2>
+        <h2>match ma nas-tay?)</h2>
+        <br class="new-emotion">
+        <h2><span style="color: #D7DA3F;">joy</span>: hey guys? why’s that song playing? guys?</h2>
+        <br class="new-emotion">
+      </div>
+      <div class="pic d">
+        <img class="hs d" src="hs4.jpg">
+      </div>
+      <div class="circle purpled"></div>
+      <div class="circle redd"></div>
+      <div class="circle greend"></div>
+    </div>
+
+
+  </div>
+<!--  TEXT END-->
+  <audio autoplay loop id="lanes">
+    <source src="growingup.mp3" type="audio/mpeg">
+  </audio>
+  <div class="player">
+    <div class="song-info">
+      <img src="https://i.scdn.co/image/ab67616d0000b273e14e94354488d0b825ce716c" alt="Album Cover" class="album-cover">
+      <div class="song-title">Growing Up Is Hard to Do</div>
+      <div class="song-artist">Paul Kang</div>
+    </div>
+    <div class="progress-bar">
+      <div class="progress" id="progress"></div>
+    </div>
+    <div class="controls">
+      <i class="fa fa-backward" onclick="redirectToNextPage()"></i>
+      <i class="fa fa-solid fa-pause"></i>
+      <i class="fa fa-forward"></i>
+    </div>
+  </div>
+</body>

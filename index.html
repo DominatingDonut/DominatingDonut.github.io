@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title> Birthday Project </title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.cdnfonts.com/css/new-walt-disney-font" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <script src='https://kit.fontawesome.com/1ee8f271b9.js'></script>
+    <script src="index.js"></script>
+
+    <audio loop id="joy">
+        <source src="bundleofjoy.mp3" type="audio/mpeg">
+    </audio>
+
+    <div id="overlay">
+        <button id="playButton">Click me!</button>
+        <h2 id="warning">Pssst! Turn up your volume :)</h2>
+    </div>
+
+    <div class="container" id="fixed-div">
+        <svg class="shapes">
+            <defs>
+                <filter id="glow">
+                    <!-- First layer of blur -->
+                    <feGaussianBlur stdDeviation="3" result="blur1"/>
+                    <!-- Second layer of blur -->
+                    <feGaussianBlur stdDeviation="5" in="blur1" result="blur2"/>
+                    <!-- Merge the layers with the original graphic -->
+                    <feMerge>
+                        <feMergeNode in="blur2"/>
+                        <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                </filter>
+            </defs>
+
+            <circle id="arc" cx="50%" cy="100%" r="53.5%" filter="url(#glow)"></circle>
+            <circle id="dot" cx="50%" cy="100%" r="5"></circle>
+        </svg>
+        <div class="portcullis"> </div>
+        <div class="castle base-1"> </div>
+        <div class="castle base-2"> </div>
+        <div class="castle base-3"> </div>
+        <div class="castle base-4"> </div>
+        <div class="base-tower left"></div>
+        <div class="base-tower right"></div>
+        <div class="castle mid-tower-left"></div>
+        <div class="mid-tower-left-roof"></div>
+        <div class="mid-tower-right"></div>
+        <div class="level-2-tower-left"></div>
+        <div class="level-2-tower-right"></div>
+        <div class="castle level-3-tower"></div>
+        <div class="level-3-tower-roof"></div>
+        <div class="castle keep-base"></div>
+        <div class="castle keep-main"></div>
+        <div class="keep side-tower"></div>
+        <div class="keep side-tower roof"></div>
+        <div class="castle keep"></div>
+        <div class="castle main-tower"></div>
+        <div class="main-tower-roof"></div>
+        <div class="main-side-roof"></div>
+        <div class="keep tower-roof"></div>
+        <h2 id="msg">
+            Happy Birthday Seojin
+        </h2>
+    </div>
+    <div id="scrollable-content">
+        <div id="long-content">
+        </div>
+        <h2 id="bundle">
+            You are my...
+        </h2>
+        <div class="player">
+            <div class="song-info">
+                <img src="https://i.scdn.co/image/ab67616d0000b273e14e94354488d0b825ce716c" alt="Album Cover" class="album-cover">
+                <div class="song-title">Bundle of Joy</div>
+                <div class="song-artist">Paul Kang</div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+            <div class="controls">
+                <i class="fa fa-backward"></i>
+                <i class="fa fa-solid fa-pause"></i>
+                <i class="fa fa-forward" onclick="redirectToNextPage()"></i>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

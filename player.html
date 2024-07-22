@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player Widget</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #015FE3;
+            margin: 0;
+        }
+
+        .player {
+            background-color: rgb(40, 40, 40, 1);
+            border-radius: 10px;
+            padding: 20px;
+            padding-top: 20px;
+            width: 350px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.0);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .song-info {
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        .album-cover {
+            position: relative;
+            width: 70px;
+            height: 70px;
+            left: 5%;
+            border-radius: 5px;
+            margin-right: 15px;
+        }
+
+        .song-title {
+            position: absolute;
+            font-size: 24px;
+            top: 44%;
+            left: 46%;
+            font-weight: 300;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        .song-artist {
+            position: absolute;
+            font-size: 16px;
+            top: 48%;
+            left: 46%;
+            font-weight: 200;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            color: rgb(180, 180, 180);
+        }
+
+        .progress-bar {
+            width: 90%;
+            height: 3px;
+            background-color: #404040;
+            border-radius: 5px;
+            overflow: hidden;
+            margin: 15px 0;
+        }
+
+        .progress {
+            height: 100%;
+            background-color: #737373;
+            /*#1DB954;*/
+            width: 0%;
+        }
+
+        .controls {
+            display: flex;
+            justify-content: space-around;
+            width: 90%;
+        }
+
+        .controls i {
+            z-index: 2;
+            font-size: 20px;
+            cursor: pointer;
+            color: rgb(255, 255, 255, 0.7);
+        }
+    </style>
+</head>
+<body>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<div class="player">
+    <div class="song-info">
+        <img src="https://i.scdn.co/image/ab67616d0000b273e14e94354488d0b825ce716c" alt="Album Cover" class="album-cover">
+        <div class="song-title">Bundle of Joy</div>
+        <div class="song-artist">Paul Kang</div>
+    </div>
+    <div class="progress-bar">
+        <div class="progress" id="progress"></div>
+    </div>
+    <div class="controls">
+        <i class="fa fa-backward"></i>
+        <i class="fa fa-solid fa-pause"></i>
+        <i class="fa fa-forward"></i>
+    </div>
+</div>
+<audio id="audio" src="bundleofjoy.mp3"></audio>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Initialize the audio element
+        const audio = document.getElementById('audio');
+
+
+        // Update progress bar
+        audio.addEventListener('timeupdate', updateProgressBar);
+
+        function updateProgressBar() {
+            const progress = document.getElementById('progress');
+            const percentage = (audio.currentTime / audio.duration) * 100;
+            progress.style.width = percentage + '%';
+        }
+    });
+</script>
+</body>
+</html>

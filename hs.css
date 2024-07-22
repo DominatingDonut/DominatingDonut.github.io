@@ -1,0 +1,385 @@
+@font-face {
+    font-family: insideoutFont;
+    src: url(insideoutFont.ttf);
+}
+@font-face {
+    font-family: creditsFont;
+    src: url(clarendon.otf);
+}
+:root {
+    --joy: #D7DA3F;
+    --sadness: #0369C2;
+    --anger: #F2393D;
+    --disgust: #4DBE46;
+    --fear: #8680C6;
+    --envy: #5ed2cf;
+    --anxiety: #f68934;
+    --embarrassment: #e77194;
+    --ennui: #9fa4d1;
+}
+body {
+    height: 2000px;
+    background-color: #061333;
+}
+#header {
+    position: fixed;
+    width: 100%;
+    height: 15%;
+    top:0;
+    background-color: #061333;
+    z-index: 3;
+    padding-bottom: 10px;
+}
+#header-corner {
+    position: absolute;
+    transform: rotate(-30deg);
+    left: 30px;
+}
+#header-msg-1 {
+    font-family: insideoutFont;
+    color: white;
+    margin: 0;
+    font-size: 32px;
+    position: relative;
+}
+#header-msg-2 {
+    font-family: insideoutFont;
+    color: white;
+    margin: 0;
+    font-size: 32px;
+    position: relative;
+}
+#header-txt {
+    font-family: insideoutFont;
+    color: white;
+    margin: 0;
+    font-size: 52px;
+    position: absolute;
+    left: 42%;
+    top: 30%;
+}
+#disney-pixar {
+    width: 60px;
+    position: relative;
+    top: 7px;
+}
+
+.player {
+    position: fixed;
+    top: 82%;
+    left: 77.5%;
+    background-color: rgb(40, 40, 40, 0.8);
+    border-radius: 10px;
+    padding: 10px;
+    width: 300px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.0);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 3;
+}
+
+.song-info {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.album-cover {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    left: 5%;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.song-title {
+    position: absolute;
+    font-size: 16px;
+    top: 17%;
+    left: 27%;
+    font-weight: 300;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.song-artist {
+    position: absolute;
+    font-size: 12px;
+    top: 37%;
+    left: 27%;
+    font-weight: 200;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    color: rgb(180, 180, 180);
+}
+
+.progress-bar {
+    width: 80%;
+    height: 3px;
+    background-color: #404040;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.progress {
+    height: 100%;
+    background-color: #737373;
+    /*#1DB954;*/
+    width: 0%;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+}
+
+.controls i {
+    z-index: 2;
+    font-size: 16px;
+    cursor: pointer;
+    color: rgb(255, 255, 255, 0.7);
+}
+
+@keyframes press {
+    0% {
+        text-shadow: none;
+    }
+    100% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    }
+}
+.fa-backward {
+    /*position: absolute;*/
+    animation: press 0.7s ease-in-out infinite alternate;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(5px);
+    z-index: 0;
+}
+
+#main-text {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    position: absolute;
+    width: 100%;
+    height: 20%;
+    z-index: 2;
+}
+
+.new-emotion {
+    display: block; /* makes it have a width */
+    content: ""; /* clears default height */
+    margin-top: 30px; /* change this to whatever height you want it */
+}
+
+.text {
+    height: 100%;
+    font-family: creditsFont;
+    color: white;
+    font-size: 15px;
+    z-index: 2;
+}
+.pic {
+    height: 100%;
+}
+
+.hs {
+    width: 480px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 45px;
+    padding-right: 20px;
+}
+
+/*AAAAA*/
+.container.a {
+    top: 7%;
+}
+.text.a {
+    position: absolute;
+    width: 60%;
+    left: 40%;
+    padding-top: 20px;
+    line-height: 8px;
+}
+.pic.a {
+    position: absolute;
+    width: 40%;
+    left: 0;
+}
+.hs.a {
+    object-position: 50% 0;
+    position: absolute;
+    left: 60px;
+}
+.circle.purplea {
+    background-color: rgba(93,46,141,0.7); /* Yellow with transparency */
+    top: 130px;
+    left: 1050px;
+    width: 130px;
+    height: 130px;
+    filter: blur(2px);
+}
+
+.circle.reda {
+    background-color: rgba(152,16,33,1.7); /* Blue with transparency */
+    top: 100px;
+    left: 1000px;
+    width: 90px;
+    height: 90px;
+    box-shadow: 0 0 20px 5px rgba(152,16,33,0.8);
+}
+
+.circle.yellowa {
+    background-color: rgba(217,194,40,0.9); /* Yellow with transparency */
+    top: 90px;
+    left: 1130px;
+    width: 50px;
+    height: 50px;
+}
+
+/*BBBBB*/
+.container.b {
+    top: 30%;
+}
+.text.b {
+    position: absolute;
+    width: 60%;
+    left: 0;
+    padding-top: 60px;
+    padding-left: 40px;
+    line-height: 16px;
+}
+.pic.b {
+    position: absolute;
+    width: 40%;
+    left: 60%;
+}
+.hs.b {
+    object-position: 50% 0;
+    position: absolute;
+    left: 60px;
+}
+.circle.purpleb {
+    background-color: rgba(91,46,138,0.7); /* Yellow with transparency */
+    top: 130px;
+    left: 100px;
+    width: 50px;
+    height: 50px;
+    filter: blur(7px);
+}
+
+.circle.blueb {
+    background-color: rgba(29,135,194,255); /* Blue with transparency */
+    top: 200px;
+    left: 630px;
+    width: 110px;
+    height: 110px;
+    box-shadow: 0 0 20px 5px rgba(29,135,194,0.8);
+    filter: blur(3px);
+}
+
+.circle.greenb {
+    background-color: rgba(65,130,35,0.8); /* Yellow with transparency */
+    top: 250px;
+    left: 590px;
+    width: 80px;
+    height: 80px;
+    filter: blur(2px);
+}
+/*CCCCC*/
+.container.c {
+    top: 53%;
+}
+.text.c {
+    position: absolute;
+    width: 60%;
+    left: 40%;
+    padding-top: 50px;
+    line-height: 8px;
+}
+.pic.c {
+    position: absolute;
+    width: 40%;
+    left: 0;
+}
+.hs.c {
+    object-position: 50% 10%;
+    position: absolute;
+    left: 60px;
+}
+.circle.redc {
+    background-color: rgba(152,16,33,0.8); /* Blue with transparency */
+    top: 200px;
+    left: 650px;
+    width: 90px;
+    height: 90px;
+    filter: blur(3px);
+}
+
+.circle.yellowc {
+    background-color: rgba(217,194,40,0.9); /* Yellow with transparency */
+    top: 260px;
+    left: 730px;
+    width: 50px;
+    height: 50px;
+}
+/*DDDDD*/
+.container.d {
+    top: 76%;
+}
+.text.d {
+    position: absolute;
+    width: 60%;
+    left: 0;
+    padding-top: 100px;
+    padding-left: 40px;
+    line-height: 8px;
+}
+.pic.d {
+    position: absolute;
+    width: 40%;
+    left: 60%;
+}
+.hs.d {
+    object-position: 70% 10%;
+    position: absolute;
+    left: 60px;
+}
+.circle.purpled {
+    background-color: rgba(93,46,140,0.9); /* Yellow with transparency */
+    top: 100px;
+    left: 650px;
+    width: 60px;
+    height: 60px;
+    box-shadow: 0 0 20px 10px rgba(93,46,140,0.7);
+    filter: blur(7px);
+}
+
+.circle.redd {
+    background-color: rgba(132,15,39,0.9); /* Blue with transparency */
+    top: 50px;
+    left: 710px;
+    width: 40px;
+    height: 40px;
+    filter: blur(5px);
+}
+
+.circle.greend {
+    background-color: rgba(94,172,38,0.9); /* Yellow with transparency */
+    top: 80px;
+    left: 620px;
+    width: 50px;
+    height: 50px;
+    filter: blur(7px);
+}

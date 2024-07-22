@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Main Page</title>
+  <link rel="stylesheet" href="mainpage.css">
+</head>
+<body>
+  <script src='https://kit.fontawesome.com/1ee8f271b9.js'></script>
+  <script src="mainpage.js"></script>
+  <div id="header">
+    <h1 id="header-txt">Pick a core memory!</h1>
+    <div id="header-corner">
+      <img id="disney-pixar" src="disneypixar.png">
+      <h2 id="header-msg">Happy <br> Birthday</h2>
+    </div>
+  </div>
+  <div id="instructionBlock">
+    <h2 class="instructions">let's take a trip down memory lane</h2>
+    <h2 class="instructions">and visit a couple times you've brought me <span style="color: #D7DA3F;">joy</span></h2>
+    <h2>asd</h2>
+    <h2 class="instructions">go inside my head and see</h2>
+    <h2 class="instructions">what <span style="color: #D7DA3F;">my</span> <span style="color: #0369C2;">fe</span><span style="color: #F2393D;">el</span><span style="color: #4DBE46;">in</span><span style="color: #8680C6;">gs</span> are saying</h2>
+    <h2>asd</h2>
+    <h2 class="instructions">hit the back button on the music player</h2>
+    <h2 class="instructions">to come back to this page when you're done</h2>
+  </div>
+  <div id="memories">
+    <a class="memory" id="high-school" href="hs.html"></a>
+    <a class="memory" id="korea" href="korea.html"></a>
+    <a class="memory" id="stl" href="stl.html"></a>
+    <a class="memory" id="la" href="la.html"></a>
+    <a class="memory" id="chicago" href="chicago.html"></a>
+    <a class="memory" id="boston" href="boston.html"></a>
+  </div>
+  <audio autoplay loop id="lanes">
+    <source src="memorylanes.mp3" type="audio/mpeg">
+  </audio>
+  <div class="player">
+    <div class="song-info">
+      <img src="https://i.scdn.co/image/ab67616d0000b273e14e94354488d0b825ce716c" alt="Album Cover" class="album-cover">
+      <div class="song-title">Memory Lanes</div>
+      <div class="song-artist">Paul Kang</div>
+    </div>
+    <div class="progress-bar">
+      <div class="progress" id="progress"></div>
+    </div>
+    <div class="controls">
+      <i class="fa fa-backward"></i>
+      <i class="fa fa-solid fa-pause"></i>
+      <i class="fa fa-forward"></i>
+    </div>
+  </div>
+</body>
+</html>
