@@ -30,10 +30,11 @@ document.addEventListener('DOMContentLoaded', function () {
         function updateArc() {
             // Calculate scroll progress
             const content = document.getElementById('long-content');
-            const scrollProgress = window.scrollY / (content.offsetHeight - window.innerHeight);
+            const scrollProgress = window.scrollY / (content.offsetHeight+220 - window.innerHeight);
             // original was document.documentElement.scrollHeight
             // Calculate strokeDashoffset
             const strokeDashoffset = 945 * (1 - scrollProgress);
+            // original = 945
             // Update strokeDashoffset as string
             arc.style.strokeDashoffset = `${strokeDashoffset}`;
 
@@ -127,8 +128,7 @@ const createStar = position => {
     const star = document.createElement("span"),
         color = selectRandom(config.colors);
 
-    star.className = "star fa-solid fa-sparkle";
-
+    star.className = "star fa-solid fa-star";
     star.style.left = px(position.x);
     star.style.top = px(position.y);
     star.style.fontSize = selectRandom(config.sizes);

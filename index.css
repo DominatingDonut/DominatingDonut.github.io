@@ -78,8 +78,6 @@
 
 
 
-
-
 @keyframes wave {
     0%, 100% {
         transform: skew(0);
@@ -107,7 +105,9 @@ body {
 }
 .scrollable {
     position: absolute !important;
-    top: 2615px !important;
+    top: 2640px !important;
+    /*higher # = down, lower = up*/
+    /*2615*/
 }
 .shapes {
     position: absolute;
